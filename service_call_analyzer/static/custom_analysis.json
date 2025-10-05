@@ -1,0 +1,94 @@
+{
+  "stages": {
+    "Introduction": {
+      "analysis": "The technician's introduction lacks professionalism and structure. While friendly, it doesn't establish credibility or set proper expectations for the consultation.",
+      "key_points": [
+        "No formal introduction with name and company",
+        "Casual tone may undermine professional credibility",
+        "Failed to confirm if it's a good time to talk",
+        "Jumped directly into technical details"
+      ],
+      "recommendations": [
+        "Start with formal introduction including name, company, and role",
+        "Ask permission to proceed and confirm timing",
+        "Set clear expectations for the consultation process",
+        "Maintain professional yet friendly demeanor"
+      ]
+    },
+    "Problem Diagnosis": {
+      "analysis": "The diagnosis phase shows technical competence but lacks systematic approach to understanding customer needs and constraints. The technician focuses on equipment options rather than thoroughly exploring the problem.",
+      "key_points": [
+        "Technician demonstrates technical knowledge",
+        "Limited exploration of customer's specific comfort issues",
+        "No discussion of budget constraints or timeline",
+        "Missed opportunity to understand usage patterns"
+      ],
+      "recommendations": [
+        "Ask specific questions about comfort levels in different rooms",
+        "Explore previous repair history and ongoing issues",
+        "Understand customer's budget range and timeline",
+        "Document current utility costs for comparison"
+      ]
+    },
+    "Solution Explanation": {
+      "analysis": "The solution presentation is comprehensive but overwhelming. The technician provides detailed technical information but may be too complex for the average customer to process effectively.",
+      "key_points": [
+        "Thorough explanation of different equipment options",
+        "Good coverage of rebates and financing options",
+        "Technical details may be too complex for customer",
+        "Limited comparison of benefits vs. current system"
+      ],
+      "recommendations": [
+        "Simplify technical explanations for better understanding",
+        "Focus on customer benefits rather than technical specifications",
+        "Provide clear cost-benefit analysis",
+        "Use visual aids or simple comparisons when possible"
+      ]
+    },
+    "Upsell Attempts": {
+      "analysis": "No clear upselling attempts were identified in this call. This represents a missed opportunity to add value and increase revenue through complementary services.",
+      "key_points": [
+        "No additional services offered",
+        "Missed opportunities for duct sealing promotion",
+        "No discussion of air quality improvements",
+        "Limited exploration of customer's other needs"
+      ],
+      "recommendations": [
+        "Identify customer pain points that could benefit from additional services",
+        "Offer complementary services that enhance the main solution",
+        "Present upsells as value-added solutions, not just additional costs",
+        "Tie upsell benefits directly to diagnosed issues"
+      ]
+    },
+    "Maintenance Plan Offer": {
+      "analysis": "The maintenance plan was mentioned briefly but not properly presented as a valuable service. This is a significant missed opportunity for recurring revenue and customer retention.",
+      "key_points": [
+        "Maintenance plan mentioned in passing",
+        "No clear explanation of plan benefits",
+        "No pricing or service details provided",
+        "Missed connection to warranty terms"
+      ],
+      "recommendations": [
+        "Present maintenance plan as essential for equipment longevity",
+        "Clearly explain what's included and the service schedule",
+        "Connect maintenance to warranty requirements",
+        "Provide clear pricing and value proposition"
+      ]
+    },
+    "Closing & Thank You": {
+      "analysis": "The closing was handled professionally with appropriate follow-up commitments. The technician respected the customer's need to consult with their spouse and provided clear next steps.",
+      "key_points": [
+        "Respected customer's decision-making process",
+        "Committed to email follow-up with quotes",
+        "Professional handling of payment discussion",
+        "Clear next steps established"
+      ],
+      "recommendations": [
+        "Recap key benefits and value propositions",
+        "Set specific timeline for follow-up",
+        "Confirm all decision-makers are included in communications",
+        "Express appreciation for the customer's time and consideration"
+      ]
+    }
+  }
+}

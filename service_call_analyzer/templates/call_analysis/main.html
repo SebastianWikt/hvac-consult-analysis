@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load dict_extras %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    {% if has_data %}
+        <!-- Call Summary Header -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="call-summary">
+                    <h4><i class="bi bi-telephone-fill me-2"></i>{{ call_summary.call_type }}</h4>
+                    <p class="mb-0">Analyzed on {{ call_summary.date_analyzed }}</p>
+                    <div class="summary-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">{{ call_summary.total_stages }}</span>
+                            <span class="stat-label">Stages</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">{{ call_summary.total_utterances }}</span>
+                            <span class="stat-label">Utterances</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">{{ call_summary.compliance_score }}/{{ call_summary.max_compliance_score }}</span>
+                            <span class="stat-label">Compliance Score</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">{{ call_summary.compliance_percentage|floatformat:0 }}%</span>
+                            <span class="stat-label">Compliance Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage Navigation Bar -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="stage-nav-horizontal">
+                    <h5><i class="bi bi-list-ul me-2"></i>Call Stages</h5>
+                    <nav class="nav nav-pills">
+                        {% for stage in stages %}
+                            <a class="nav-link" href="#stage-{{ forloop.counter }}" data-stage="{{ stage }}">
+                                {{ stage }}
+                            </a>
+                        {% endfor %}
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Column: Transcript -->
+            <div class="col-lg-8">
+                <!-- Transcript Sections -->
+                {% for stage in stages %}
+                    <div class="transcript-section" id="stage-{{ forloop.counter }}">
+                        <h3 class="stage-header">
+                            <i class="bi bi-chat-dots me-2"></i>{{ stage }}
+                        </h3>
+                        <div class="utterances-container">
+                            {% if stage in utterances_by_stage %}
+                                {% for utterance in utterances_by_stage|lookup:stage %}
+                                    <div class="utterance {{ utterance.speaker|lower }}">
+                                        <div class="speaker-info">
+                                            <span class="speaker-name {{ utterance.speaker|lower }}">
+                                                {% if utterance.speaker == 'Tech' %}
+                                                    <i class="bi bi-person-gear me-1"></i>
+                                                {% else %}
+                                                    <i class="bi bi-person me-1"></i>
+                                                {% endif %}
+                                                {{ utterance.speaker }}
+                                            </span>
+                                            <span class="timestamp">
+                                                {{ utterance.start|floatformat:0 }}s - {{ utterance.end|floatformat:0 }}s
+                                            </span>
+                                        </div>
+                                        <p class="utterance-text">{{ utterance.text }}</p>
+                                    </div>
+                                {% endfor %}
+                            {% else %}
+                                <div class="alert alert-info">
+                                    <i class="bi bi-info-circle me-2"></i>
+                                    No utterances found for this stage.
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <!-- Right Column: Analysis Panel -->
+            <div class="col-lg-4">
+                <div class="analysis-panel">
+                    {% for stage in stages %}
+                        <div class="analysis-section" id="analysis-{{ forloop.counter }}">
+                            <h4 class="analysis-header">
+                                <i class="bi bi-graph-up me-2"></i>{{ stage }} Analysis
+                            </h4>
+                            <div class="analysis-content">
+                                <!-- Compliance Score -->
+                                {% if stage in compliance_data %}
+                                    {% with compliance=compliance_data|lookup:stage %}
+                                        <div class="compliance-score">
+                                            <span class="score-display {% if compliance.score >= 4 %}score-good{% elif compliance.score >= 2 %}score-medium{% else %}score-poor{% endif %}">
+                                                {{ compliance.score }}/{{ compliance.max_score }}
+                                            </span>
+                                            <div class="score-bar">
+                                                <div class="score-fill {% if compliance.score >= 4 %}good{% elif compliance.score >= 2 %}medium{% else %}poor{% endif %}" 
+                                                     style="width: {% widthratio compliance.score compliance.max_score 100 %}%"></div>
+                                            </div>
+                                            <small class="text-muted">Compliance Score</small>
+                                        </div>
+
+                                        <!-- Evidence -->
+                                        {% if compliance.evidence and compliance.evidence != '—' %}
+                                            <div class="evidence-section">
+                                                <h6><i class="bi bi-quote me-1"></i>Evidence</h6>
+                                                <div class="evidence-text">{{ compliance.evidence }}</div>
+                                            </div>
+                                        {% endif %}
+
+                                        <!-- Suggestions -->
+                                        {% if compliance.suggestion %}
+                                            <div class="suggestion-section">
+                                                <h6><i class="bi bi-lightbulb me-1"></i>Suggestions</h6>
+                                                <div class="suggestion-text">{{ compliance.suggestion }}</div>
+                                            </div>
+                                        {% endif %}
+                                    {% endwith %}
+                                {% else %}
+                                    <div class="alert alert-secondary">
+                                        <i class="bi bi-exclamation-triangle me-2"></i>
+                                        No compliance data available for this stage.
+                                    </div>
+                                {% endif %}
+
+                                <!-- Custom Analysis -->
+                                {% if stage in custom_analysis %}
+                                    {% with analysis=custom_analysis|lookup:stage %}
+                                        {% if analysis.analysis or analysis.key_points or analysis.recommendations %}
+                                            <div class="custom-analysis-section">
+                                                <h6><i class="bi bi-clipboard-data me-1"></i>Custom Analysis</h6>
+                                                
+                                                {% if analysis.analysis %}
+                                                    <div class="custom-analysis-text">{{ analysis.analysis }}</div>
+                                                {% endif %}
+
+                                                {% if analysis.key_points %}
+                                                    <div class="key-points">
+                                                        <strong>Key Points:</strong>
+                                                        <ul>
+                                                            {% for point in analysis.key_points %}
+                                                                <li>{{ point }}</li>
+                                                            {% endfor %}
+                                                        </ul>
+                                                    </div>
+                                                {% endif %}
+
+                                                {% if analysis.recommendations %}
+                                                    <div class="recommendations">
+                                                        <strong>Recommendations:</strong>
+                                                        <ul>
+                                                            {% for rec in analysis.recommendations %}
+                                                                <li>{{ rec }}</li>
+                                                            {% endfor %}
+                                                        </ul>
+                                                    </div>
+                                                {% endif %}
+                                            </div>
+                                        {% endif %}
+                                    {% endwith %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <!-- Error State -->
+        <div class="row">
+            <div class="col-12">
+                <div class="error-container">
+                    <div class="error-icon">
+                        <i class="bi bi-exclamation-triangle-fill"></i>
+                    </div>
+                    <h2>Unable to Load Call Data</h2>
+                    {% if error_message %}
+                        <div class="error-message">
+                            {{ error_message }}
+                        </div>
+                    {% endif %}
+                    <p class="text-muted">Please check that the call data file is available and properly formatted.</p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
