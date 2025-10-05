@@ -2,6 +2,7 @@
 
 import assemblyai as aai
 
+API_KEY = os.getenv("ASSEMBLYAI_API_KEY")
 aai.settings.api_key = "0b02856b28b544fb84c66d827e380ebf"
 
 # audio_file = "./local_file.mp3"
