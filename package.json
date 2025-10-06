@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Service Call Analysis Tool",
   "scripts": {
-    "build": "python build_static.py",
-    "dev": "python build_static.py && python -m http.server 8000 --directory static"
+    "build": "python generate_static.py",
+    "dev": "python generate_static.py && python -m http.server 8000 --directory dist"
   },
   "keywords": ["service", "call", "analysis", "django", "vercel"],
   "author": "Your Name",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {}
 }
