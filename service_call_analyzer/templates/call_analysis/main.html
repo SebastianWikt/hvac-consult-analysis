@@ -97,83 +97,63 @@
                     <div class="analysis-panel-wrapper">
                         {% for stage in stages %}
                             <div class="analysis-section" id="analysis-{{ forloop.counter }}">
-                            <h4 class="analysis-header">
-                                <i class="bi bi-graph-up me-2"></i>{{ stage }} Analysis
-                                <small class="stage-indicator">Stage {{ forloop.counter }}</small>
-                            </h4>
+                            <div class="analysis-header">
+                                <div class="section-indicator">
+                                    <h4 class="section-title">
+                                        <i class="bi bi-chat-dots me-2"></i>{{ stage }}
+                                    </h4>
+                                    <p class="section-subtitle">Stage {{ forloop.counter }} Analysis</p>
+                                </div>
+                                <div class="connection-line"></div>
+                            </div>
                             <div class="analysis-content">
-                                <!-- Compliance Score -->
-                                {% if stage in compliance_data %}
-                                    {% with compliance=compliance_data|lookup:stage %}
-                                        <div class="compliance-score">
-                                            <span class="score-display {% if compliance.score >= 4 %}score-good{% elif compliance.score >= 2 %}score-medium{% else %}score-poor{% endif %}">
-                                                {{ compliance.score }}/{{ compliance.max_score }}
-                                            </span>
-                                            <div class="score-bar">
-                                                <div class="score-fill {% if compliance.score >= 4 %}good{% elif compliance.score >= 2 %}medium{% else %}poor{% endif %}" 
-                                                     style="width: {% widthratio compliance.score compliance.max_score 100 %}%"></div>
-                                            </div>
-                                            <small class="text-muted">Compliance Score</small>
-                                        </div>
+                                <!-- Analysis Sections -->
+                                {% if stage in custom_analysis %}
+                                    {% with analysis=custom_analysis|lookup:stage %}
+                                        {% if analysis.analysis or analysis.key_points or analysis.recommendations %}
+                                            <!-- Analysis Summary -->
+                                            {% if analysis.analysis %}
+                                                <div class="analysis-card">
+                                                    <h5><i class="bi bi-search me-2"></i>Analysis Summary</h5>
+                                                    <div class="analysis-text">{{ analysis.analysis }}</div>
+                                                </div>
+                                            {% endif %}
 
-                                        <!-- Evidence -->
-                                        {% if compliance.evidence and compliance.evidence != '—' %}
-                                            <div class="evidence-section">
-                                                <h6><i class="bi bi-quote me-1"></i>Evidence</h6>
-                                                <div class="evidence-text">{{ compliance.evidence }}</div>
-                                            </div>
-                                        {% endif %}
+                                            <!-- Key Observations -->
+                                            {% if analysis.key_points %}
+                                                <div class="key-points-card">
+                                                    <h5><i class="bi bi-check-circle me-2"></i>Key Observations</h5>
+                                                    <ul class="key-points-list">
+                                                        {% for point in analysis.key_points %}
+                                                            <li><i class="bi bi-arrow-right-circle me-2"></i>{{ point }}</li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                </div>
+                                            {% endif %}
 
-                                        <!-- Suggestions -->
-                                        {% if compliance.suggestion %}
-                                            <div class="suggestion-section">
-                                                <h6><i class="bi bi-lightbulb me-1"></i>Suggestions</h6>
-                                                <div class="suggestion-text">{{ compliance.suggestion }}</div>
+                                            <!-- Improvement Opportunities -->
+                                            {% if analysis.recommendations %}
+                                                <div class="improvement-opportunities-card">
+                                                    <h5><i class="bi bi-lightbulb me-2"></i>Improvement Opportunities</h5>
+                                                    <ul class="improvement-opportunities-list">
+                                                        {% for rec in analysis.recommendations %}
+                                                            <li><i class="bi bi-plus-circle me-2"></i>{{ rec }}</li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                </div>
+                                            {% endif %}
+                                        {% else %}
+                                            <div class="no-data-card">
+                                                <i class="bi bi-info-circle me-2"></i>
+                                                <span>No analysis data available for this stage.</span>
                                             </div>
                                         {% endif %}
                                     {% endwith %}
                                 {% else %}
-                                    <div class="alert alert-secondary">
-                                        <i class="bi bi-exclamation-triangle me-2"></i>
-                                        No compliance data available for this stage.
+                                    <div class="no-data-card">
+                                        <i class="bi bi-info-circle me-2"></i>
+                                        <span>No analysis data available for this stage.</span>
                                     </div>
-                                {% endif %}
-
-                                <!-- Custom Analysis -->
-                                {% if stage in custom_analysis %}
-                                    {% with analysis=custom_analysis|lookup:stage %}
-                                        {% if analysis.analysis or analysis.key_points or analysis.recommendations %}
-                                            <div class="custom-analysis-section">
-                                                <h6><i class="bi bi-clipboard-data me-1"></i>Custom Analysis</h6>
-                                                
-                                                {% if analysis.analysis %}
-                                                    <div class="custom-analysis-text">{{ analysis.analysis }}</div>
-                                                {% endif %}
-
-                                                {% if analysis.key_points %}
-                                                    <div class="key-points">
-                                                        <strong>Key Points:</strong>
-                                                        <ul>
-                                                            {% for point in analysis.key_points %}
-                                                                <li>{{ point }}</li>
-                                                            {% endfor %}
-                                                        </ul>
-                                                    </div>
-                                                {% endif %}
-
-                                                {% if analysis.recommendations %}
-                                                    <div class="recommendations">
-                                                        <strong>Recommendations:</strong>
-                                                        <ul>
-                                                            {% for rec in analysis.recommendations %}
-                                                                <li>{{ rec }}</li>
-                                                            {% endfor %}
-                                                        </ul>
-                                                    </div>
-                                                {% endif %}
-                                            </div>
-                                        {% endif %}
-                                    {% endwith %}
                                 {% endif %}
                             </div>
                             </div>

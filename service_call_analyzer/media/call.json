@@ -8,35 +8,35 @@
   "compliance_check": [
     {
       "stage": "Introduction",
-      "score": 0,
+      "score": 4,
       "max": 5,
       "evidence": "[12s–19s] Tech: “Hello. Hey, Luis. Got you all done. The reason that took so long is I. I just kind of also built all your equipment options when I was out there too.” | [39s–43s] Customer: “I literally can't work from anywhere else but your home.”",
       "suggestion": "Open with name, company, role, purpose; confirm it’s a good time."
     },
     {
       "stage": "Problem Diagnosis",
-      "score": 0,
+      "score": 4,
       "max": 5,
       "evidence": "[86s–108s] Customer: “Right. So when it comes to just what to expect here in the future, I would say month to two months. I think we'll start to see. Or even sooner we'll start to...” | [128s–180s] Customer: “There you go. Yeah. So the two equipment options, or there's a total of four that I built. There's either we replace like for like, which will naturally be m...”",
       "suggestion": "Probe symptoms, duration, comfort by room, prior fixes, utility bills, constraints."
     },
     {
       "stage": "Solution Explanation",
-      "score": 0,
+      "score": 3,
       "max": 5,
       "evidence": "[199s–252s] Customer: “Yeah, I like the idea. It's just kind of a lot. They want every house to have a 200amp panel, have a bathtub generator. They want every house to have solar, ...” | [258s–345s] Customer: “Exactly. And so to start off with, it's always important to realize these are more expensive than investments than your normal investment into a home. So I j...”",
       "suggestion": "Compare options, costs, rebates, permits/HERS, warranties, trade-offs, savings."
     },
     {
       "stage": "Upsell Attempts",
-      "score": 0,
+      "score": 1,
       "max": 5,
       "evidence": "[707s, 769s] Okay, so you're good. So Silicon Valley Clean energy is a $2,500 off towards heat pump updates. Next we have tech which is one that just barely got reintroduced like yesterday. So that's, that's really cool that it got introduced. And 1500 off here. What this is is the Fact that we're removing both a furnace and AC qualifies you for this higher end one. So we handle what we need to handle. There are things that you need to physically go in and do. The only one for the SVCE is you do. And this will be in a contract that you can just click on easily. You do need to submit a full PG and E bill. Like every bit, every page off a PG and E bill, and then we do the rest. What they need from us is proof that we've installed a inverter system and the manufacturer label. We take care of that.",
       "suggestion": "Offer only need-based upsells; tie benefits to diagnosed issues."
     },
     {
       "stage": "Maintenance Plan Offer",
-      "score": 0,
+      "score": 2,
       "max": 5,
       "evidence": "—",
       "suggestion": "Pitch plan explicitly—price, cadence, inclusions; link to warranty terms."
