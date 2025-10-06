@@ -199,7 +199,7 @@
       "stage": "General"
     },
     {
-      "speaker": "Customer",
+      "speaker": "Tech",
       "start": 128.11,
       "end": 179.59,
       "text": "There you go. Yeah. So the two equipment options, or there's a total of four that I built. There's either we replace like for like, which will naturally be more efficient, even though it's just going to be the updated version of what you have. It's going to be a new furnace, new coil, new condenser, higher sear rating, better efficiency, but still like the same type of equipment. The next step beyond that is maintaining gas heating, electric cooling, but upgrading efficiency. And the interesting thing about that is that actually ends up being the most expensive one of the four that I've built. Are you familiar with natural gas phase outs?",
@@ -210,14 +210,7 @@
       "start": 179.67,
       "end": 198.54,
       "text": "No. Okay. So it is something like, let's say, for instance, we have stove tops being phased out. We do have gas water heaters being phased out. We have gas furnaces being phased out. Are you familiar with what California's goal is in every. Yeah, some of that.",
-      "stage": "General"
-    },
-    {
-      "speaker": "Customer",
-      "start": 180.55,
-      "end": 197.5,
-      "text": "Okay. So it is something like, let's say, for instance, we have stove tops being phased out. We do have gas water heaters being phased out. We have gas furnaces being phased out. Are you familiar with what California's goal is in every.",
-      "stage": "General"
+      "stage": "Problem Diagnosis"
     },
     {
       "speaker": "Tech",
