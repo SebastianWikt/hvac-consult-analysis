@@ -3,11 +3,20 @@
   "version": "1.0.0",
   "description": "Service Call Analysis Tool",
   "scripts": {
-    "build": "python generate_static.py",
-    "dev": "python generate_static.py && python -m http.server 8000 --directory dist"
+    "build": "node build.js",
+    "dev": "node build.js && npx http-server dist -p 8000",
+    "python-build": "python generate_static.py"
   },
-  "keywords": ["service", "call", "analysis", "django", "vercel"],
+  "keywords": [
+    "service",
+    "call",
+    "analysis",
+    "django",
+    "vercel"
+  ],
   "author": "Your Name",
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
 }

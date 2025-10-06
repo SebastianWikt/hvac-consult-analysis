@@ -1,25 +1,20 @@
 # Quick Vercel Deployment Guide
 
 ## ✅ Fixed Issues
+- **Python Dependency**: Replaced Python build with Node.js build script
 - **Unicode Error**: Fixed UTF-8 encoding issue with JSON files
-- **Windows Compatibility**: Updated scripts to work on Windows
-- **Simplified Build**: No complex Python dependencies during deployment
+- **Build Process**: Pure Node.js build that works on Vercel
 
-## 🚀 Deploy in 3 Steps
+## 🚀 Deploy in 2 Steps
 
-### Step 1: Generate Static Site
+### Step 1: Test Locally (Optional)
 ```bash
-python generate_static.py
-```
-
-### Step 2: Test Locally (Optional)
-```bash
-python test_static.py
-python -m http.server 8000 --directory dist
+npm run build
+npm run dev
 ```
 Then open http://localhost:8000
 
-### Step 3: Deploy to Vercel
+### Step 2: Deploy to Vercel
 
 #### Option A: Vercel CLI
 ```bash
@@ -64,8 +59,13 @@ dist/
 
 To update call data:
 1. Replace `service_call_analyzer/media/call.json`
-2. Run `python generate_static.py`
-3. Deploy to Vercel (automatic if using Git)
+2. Push to Git (Vercel will automatically rebuild)
+
+Or test locally first:
+```bash
+npm run build
+npm run dev
+```
 
 ## 🐛 Troubleshooting
 
