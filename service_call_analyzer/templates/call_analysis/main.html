@@ -107,6 +107,24 @@
                                 <div class="connection-line"></div>
                             </div>
                             <div class="analysis-content">
+                                <!-- Compliance Rating -->
+                                {% if stage in compliance_data %}
+                                    {% with compliance=compliance_data|lookup:stage %}
+                                        <div class="compliance-rating-card">
+                                            <div class="rating-header">
+                                                <h5><i class="bi bi-clipboard-check me-2"></i>Compliance Rating</h5>
+                                                <div class="rating-score {% if compliance.score >= 4 %}rating-good{% elif compliance.score >= 2 %}rating-medium{% else %}rating-poor{% endif %}">
+                                                    {{ compliance.score }}/{{ compliance.max_score }}
+                                                </div>
+                                            </div>
+                                            <div class="rating-bar">
+                                                <div class="rating-fill {% if compliance.score >= 4 %}good{% elif compliance.score >= 2 %}medium{% else %}poor{% endif %}" 
+                                                     style="width: {% widthratio compliance.score compliance.max_score 100 %}%"></div>
+                                            </div>
+                                        </div>
+                                    {% endwith %}
+                                {% endif %}
+
                                 <!-- Analysis Sections -->
                                 {% if stage in custom_analysis %}
                                     {% with analysis=custom_analysis|lookup:stage %}

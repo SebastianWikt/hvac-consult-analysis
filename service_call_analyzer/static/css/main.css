@@ -245,6 +245,86 @@ body {
     background: #f8f9fa;
 }
 
+/* Compliance Rating Card */
+.compliance-rating-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-left: 5px solid #007bff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.compliance-rating-card:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+}
+
+.rating-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.rating-header h5 {
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.rating-score {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.rating-good {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.rating-medium {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.rating-poor {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.rating-bar {
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.rating-fill {
+    height: 100%;
+    transition: width 0.8s ease;
+    border-radius: 4px;
+}
+
+.rating-fill.good {
+    background: linear-gradient(90deg, #28a745, #20c997);
+}
+
+.rating-fill.medium {
+    background: linear-gradient(90deg, #ffc107, #fd7e14);
+}
+
+.rating-fill.poor {
+    background: linear-gradient(90deg, #dc3545, #e83e8c);
+}
+
 /* Analysis Card Styles */
 .analysis-card, .key-points-card, .improvement-opportunities-card {
     background: #ffffff;
