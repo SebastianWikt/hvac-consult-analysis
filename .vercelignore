@@ -1,0 +1,31 @@
+# Django files
+service_call_analyzer/db.sqlite3
+service_call_analyzer/__pycache__/
+service_call_analyzer/*/__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/

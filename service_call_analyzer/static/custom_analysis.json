@@ -28,16 +28,17 @@
     "Solution Explanation": {
       "analysis": "The solution presentation is comprehensive but overwhelming. The technician provides detailed technical information but may be too complex for the average customer to process effectively.",
       "key_points": [
-        "Thorough explanation of different equipment options",
-        "Good coverage of rebates and financing options",
-        "Technical details may be too complex for customer",
-        "Limited comparison of benefits vs. current system"
+        "[390s-527s]: Jumps between HERS and sealing and rebates -> no need to explain HERS in detail (sealing) and can leave rebates until the end.",
+        "[588s-645s]: Good job of tying heat pump to something custome understands -> builds trust",
+        "[645s-929s]: Good explanation of temperature effect. Rebates are a bit distracting.",
+        "[929s-1061s]: Attic explanation good - MISS with no having numbers for customers number one choice -> should be more prepared or have technology to visually show to customer",
+        "[1485s-1517s]: Logistics explanation -> no misses"
       ],
       "recommendations": [
-        "Simplify technical explanations for better understanding",
-        "Focus on customer benefits rather than technical specifications",
-        "Provide clear cost-benefit analysis",
-        "Use visual aids or simple comparisons when possible"
+        "Focus on customer benefits rather than technical specifications.",
+        "Leave any price/rebate talk until the end-it can be distracting.",
+        "Have estimates ready for customer for all feasible possiblities. Attic was an option, but no estimate available (MISS).",
+        "Design tech to visually show customer what is happening, including estimates and effects that they would benefit from"
       ]
     },
     "Upsell Attempts": {
