@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeNavigation();
     initializeScrollSpy();
     initializeAnimations();
+    initializeAnalysisSync();
 });
 
 /**
@@ -66,42 +67,108 @@ function initializeNavigation() {
 }
 
 /**
- * Initialize scroll spy to highlight current section
+ * Initialize scroll spy to highlight current section and sync analysis panel
  */
 function initializeScrollSpy() {
     const sections = document.querySelectorAll('.transcript-section');
-    const navLinks = document.querySelectorAll('.stage-nav-horizontal .nav-link');
     
-    if (sections.length === 0 || navLinks.length === 0) return;
+    if (sections.length === 0) return;
     
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const sectionId = '#' + entry.target.id;
-                updateActiveNavLink(sectionId);
+    // Simple and reliable scroll listener
+    function handleScroll() {
+        const scrollPosition = window.scrollY + 200; // Check what's 200px from top
+        let activeSection = null;
+        let activeSectionNumber = null;
+        
+        sections.forEach((section, index) => {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                activeSection = section;
+                activeSectionNumber = index + 1;
             }
         });
-    }, {
-        rootMargin: '-20% 0px -70% 0px',
-        threshold: 0.1
-    });
+        
+        if (activeSection && activeSectionNumber) {
+            const sectionId = '#' + activeSection.id;
+            updateActiveNavLink(sectionId);
+            syncAnalysisPanel(activeSectionNumber);
+        }
+    }
     
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+    // Call immediately and on scroll
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
 }
 
 /**
- * Update active navigation link
+ * Update active navigation link and transcript section
  */
 function updateActiveNavLink(targetId) {
     const navLinks = document.querySelectorAll('.stage-nav-horizontal .nav-link');
+    const transcriptSections = document.querySelectorAll('.transcript-section');
     
+    // Update navigation links
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === targetId) {
             link.classList.add('active');
         }
+    });
+    
+    // Update transcript sections
+    transcriptSections.forEach(section => {
+        section.classList.remove('active');
+        if ('#' + section.id === targetId) {
+            section.classList.add('active');
+        }
+    });
+}
+
+/**
+ * Synchronize analysis panel with current transcript section
+ */
+function syncAnalysisPanel(sectionNumber) {
+    const targetAnalysis = document.querySelector(`#analysis-${sectionNumber}`);
+    
+    if (!targetAnalysis) {
+        console.log(`Analysis section not found: analysis-${sectionNumber}`);
+        return;
+    }
+    
+    // Don't sync if already active
+    if (targetAnalysis.classList.contains('active')) return;
+    
+    // Hide all analysis sections immediately
+    const allAnalysisSections = document.querySelectorAll('.analysis-section');
+    allAnalysisSections.forEach(section => {
+        section.classList.remove('active');
+    });
+    
+    // Show and activate the target analysis section immediately
+    targetAnalysis.classList.add('active');
+    
+    console.log(`Switched to analysis section: ${sectionNumber}`);
+}
+
+/**
+ * Initialize analysis panel synchronization
+ */
+function initializeAnalysisSync() {
+    // Show the first analysis section by default
+    const firstAnalysisSection = document.querySelector('.analysis-section');
+    if (firstAnalysisSection) {
+        firstAnalysisSection.classList.add('active');
+    }
+    
+    // Update analysis sync when navigation links are clicked
+    const navLinks = document.querySelectorAll('.stage-nav-horizontal .nav-link');
+    navLinks.forEach((link, index) => {
+        link.addEventListener('click', function() {
+            const sectionNumber = index + 1;
+            syncAnalysisPanel(sectionNumber);
+        });
     });
 }
 

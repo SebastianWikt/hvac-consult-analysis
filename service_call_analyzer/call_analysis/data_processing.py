@@ -40,30 +40,37 @@ class CallData:
     
     def get_utterances_by_stage(self, stage: str) -> List[Dict[str, Any]]:
         """
-        Get all utterances for a specific stage.
+        Get all utterances for a specific stage, sorted chronologically.
         
         Args:
             stage: Stage name to filter by
             
         Returns:
-            List of utterances for the specified stage
+            List of utterances for the specified stage, sorted by start time
         """
-        return [
+        stage_utterances = [
             utterance for utterance in self.utterances 
             if utterance.get('stage') == stage
         ]
+        # Sort by start time to ensure chronological order
+        return sorted(stage_utterances, key=lambda x: x.get('start', 0))
     
     def get_all_utterances_grouped_by_stage(self) -> Dict[str, List[Dict[str, Any]]]:
         """
-        Group all utterances by their stage.
+        Group all utterances by their stage, with chronological ordering within each stage.
         
         Returns:
-            Dictionary with stage names as keys and lists of utterances as values
+            Dictionary with stage names as keys and chronologically sorted lists of utterances as values
         """
         grouped = defaultdict(list)
         for utterance in self.utterances:
             stage = utterance.get('stage', 'General')
             grouped[stage].append(utterance)
+        
+        # Sort utterances within each stage chronologically
+        for stage in grouped:
+            grouped[stage].sort(key=lambda x: x.get('start', 0))
+        
         return dict(grouped)
     
     def get_compliance_data(self, stage: str) -> Optional[Dict[str, Any]]:
@@ -172,7 +179,7 @@ class CallData:
                 json_data = json.load(file)
             return cls(json_data)
         except json.JSONDecodeError as e:
-            raise json.JSONDecodeError(f"Invalid JSON in file {file_path}: {e}")
+            raise ValueError(f"Invalid JSON in file {file_path}: {e}")
 
 
 class CustomAnalysis:

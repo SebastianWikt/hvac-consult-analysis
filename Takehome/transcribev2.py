@@ -46,7 +46,7 @@ config = aai.TranscriptionConfig(
     ],
     # boost_param=aai.BoostParam.high,  # raise weight of boosted terms
     # Nice-to-have analytics:
-    sentiment_analysis=True,  # set True if you want per-utterance sentiment
+    sentiment_analysis=False,  # set True if you want per-utterance sentiment
     auto_chapters=False,       # set True to get rough sections
     entity_detection=False,    # set True to extract brands/components
 )

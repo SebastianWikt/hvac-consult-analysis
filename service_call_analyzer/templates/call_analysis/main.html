@@ -94,10 +94,12 @@
             <!-- Right Column: Analysis Panel -->
             <div class="col-lg-4">
                 <div class="analysis-panel">
-                    {% for stage in stages %}
-                        <div class="analysis-section" id="analysis-{{ forloop.counter }}">
+                    <div class="analysis-panel-wrapper">
+                        {% for stage in stages %}
+                            <div class="analysis-section" id="analysis-{{ forloop.counter }}">
                             <h4 class="analysis-header">
                                 <i class="bi bi-graph-up me-2"></i>{{ stage }} Analysis
+                                <small class="stage-indicator">Stage {{ forloop.counter }}</small>
                             </h4>
                             <div class="analysis-content">
                                 <!-- Compliance Score -->
@@ -174,8 +176,9 @@
                                     {% endwith %}
                                 {% endif %}
                             </div>
-                        </div>
-                    {% endfor %}
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>

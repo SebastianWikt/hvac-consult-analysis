@@ -31,7 +31,7 @@
       "stage": "Upsell Attempts",
       "score": 0,
       "max": 5,
-      "evidence": "—",
+      "evidence": "[707s, 769s] Okay, so you're good. So Silicon Valley Clean energy is a $2,500 off towards heat pump updates. Next we have tech which is one that just barely got reintroduced like yesterday. So that's, that's really cool that it got introduced. And 1500 off here. What this is is the Fact that we're removing both a furnace and AC qualifies you for this higher end one. So we handle what we need to handle. There are things that you need to physically go in and do. The only one for the SVCE is you do. And this will be in a contract that you can just click on easily. You do need to submit a full PG and E bill. Like every bit, every page off a PG and E bill, and then we do the rest. What they need from us is proof that we've installed a inverter system and the manufacturer label. We take care of that.",
       "suggestion": "Offer only need-based upsells; tie benefits to diagnosed issues."
     },
     {
@@ -357,7 +357,7 @@
       "start": 707.04,
       "end": 769.85,
       "text": "Okay, so you're good. So Silicon Valley Clean energy is a $2,500 off towards heat pump updates. Next we have tech which is one that just barely got reintroduced like yesterday. So that's, that's really cool that it got introduced. And 1500 off here. What this is is the Fact that we're removing both a furnace and AC qualifies you for this higher end one. So we handle what we need to handle. There are things that you need to physically go in and do. The only one for the SVCE is you do. And this will be in a contract that you can just click on easily. You do need to submit a full PG and E bill. Like every bit, every page off a PG and E bill, and then we do the rest. What they need from us is proof that we've installed a inverter system and the manufacturer label. We take care of that.",
-      "stage": "Introduction"
+      "stage": "Upsell Attempts"
     },
     {
       "speaker": "Tech",
@@ -441,7 +441,7 @@
       "start": 830.01,
       "end": 910.57,
       "text": "So you can actually see what's kind of funny is it's relatively around the same price as a gap and actually a little bit less expensive, weirdly. And what's really cool, I was actually talking to Alex that I was really impressed. I just built your best possible heat pump. This is like our branded unit. It's a daikin. Daikin we love to work with because they really like us. If you ever look up daikin products on Google and you look up, like, install videos, you'll actually see my company installing them because we do the worldwide training for how to install daikin, so we just have a great partnership with them. So we like to install them. But what's interesting is Bryant does have a corner on a type of technology. Heat pumps, on occasion, enter a defrost cycle, which is where it briefly stops heating and it just runs itself alone to heat itself back up. These are known to not really enter that. And the brilliant. And it's just because of the way their coils are built. They have a better type of Metal derivative in it that is better at dissipating its own heat and keeping itself warm.",
-      "stage": "Introduction"
+      "stage": "Upsell Attempts"
     },
     {
       "speaker": "Tech",
@@ -581,7 +581,7 @@
       "start": 1176.08,
       "end": 1205.92,
       "text": "So all of these are going to be great options for you. I do have to take this call. Feel free to review this. Hello? Okay, I'm still talking to our client here about different options, so I don't know. Yeah.",
-      "stage": "Introduction"
+      "stage": "Upsell Attempts"
     },
     {
       "speaker": "Tech",
@@ -651,7 +651,7 @@
       "start": 1262.54,
       "end": 1287.15,
       "text": "Yep. The brand is Bosch. Very highly reviewed. Mostly actually highly reviewed from technicians, which is very cool. Technicians love working on them because they're very reliable. But I don't know where the Bosch would end up. But I do think it would be Roughly in that same area. The only thing we can find out with Bosch in a second. But you see how this says Energy Star, high heat.",
-      "stage": "Introduction"
+      "stage": "Upsell Attempts"
     },
     {
       "speaker": "Tech",
@@ -889,7 +889,7 @@
       "start": 1689.44,
       "end": 1742.33,
       "text": "Within a year. But then I think the terms actually go really, really close. It's like four, five years of, I think 9.99 from there. But the nice thing though is let's say you don't pay it off in full. Let's say you go to the year and maybe you put 18,000 down. So we still have a remaining balance of. Still remaining balance of 8,422. What then happens is that interest only applies to that remaining balance. So we only get the remaining balance. So that would then divide it by. Yeah, so we just get that remaining amount and then divide it by 60. That would be like your monthly payment.",
-      "stage": "Introduction"
+      "stage": "Maintenance Plan Offer"
     },
     {
       "speaker": "Tech",
