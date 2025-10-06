@@ -8,14 +8,14 @@
   "compliance_check": [
     {
       "stage": "Introduction",
-      "score": 4,
+      "score": 3.5,
       "max": 5,
       "evidence": "[12s–19s] Tech: “Hello. Hey, Luis. Got you all done. The reason that took so long is I. I just kind of also built all your equipment options when I was out there too.” | [39s–43s] Customer: “I literally can't work from anywhere else but your home.”",
       "suggestion": "Open with name, company, role, purpose; confirm it’s a good time."
     },
     {
       "stage": "Problem Diagnosis",
-      "score": 4,
+      "score": 2.5,
       "max": 5,
       "evidence": "[86s–108s] Customer: “Right. So when it comes to just what to expect here in the future, I would say month to two months. I think we'll start to see. Or even sooner we'll start to...” | [128s–180s] Customer: “There you go. Yeah. So the two equipment options, or there's a total of four that I built. There's either we replace like for like, which will naturally be m...”",
       "suggestion": "Probe symptoms, duration, comfort by room, prior fixes, utility bills, constraints."
@@ -129,10 +129,17 @@
       "stage": "Problem Diagnosis"
     },
     {
+      "speaker": "Customer",
+      "start": 85.76,
+      "end": 86.76,
+      "text": "Right.",
+      "stage": "Problem Diagnosis"
+    },
+    {
       "speaker": "Tech",
-      "start": 85.99,
+      "start": 86.76,
       "end": 108.03,
-      "text": "Right. So when it comes to just what to expect here in the future, I would say month to two months. I think we'll start to see. Or even sooner we'll start to see the efficiency drop again. And we still have those mold issues. I did just want to show you some different equipment options.",
+      "text": "So when it comes to just what to expect here in the future, I would say month to two months. I think we'll start to see. Or even sooner we'll start to see the efficiency drop again. And we still have those mold issues. I did just want to show you some different equipment options.",
       "stage": "Problem Diagnosis"
     },
     {
@@ -192,10 +199,17 @@
       "stage": "Problem Diagnosis"
     },
     {
+      "speaker": "Customer",
+      "start": 179.59,
+      "end": 179.67,
+      "text": "No.",
+      "stage": "Problem Diagnosis"
+    },
+    {
       "speaker": "Tech",
       "start": 179.67,
       "end": 198.54,
-      "text": "No. Okay. So it is something like, let's say, for instance, we have stove tops being phased out. We do have gas water heaters being phased out. We have gas furnaces being phased out. Are you familiar with what California's goal is in every.",
+      "text": "Okay. So it is something like, let's say, for instance, we have stove tops being phased out. We do have gas water heaters being phased out. We have gas furnaces being phased out. Are you familiar with what California's goal is in every.",
       "stage": "Problem Diagnosis"
     },
     {
