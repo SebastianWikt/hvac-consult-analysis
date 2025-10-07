@@ -42,6 +42,13 @@
       "suggestion": "Pitch plan explicitly—price, cadence, inclusions; link to warranty terms."
     },
     {
+      "stage": "Financing",
+      "score": 4,
+      "max": 5,
+      "evidence": "[1516s–1520s] Customer: "And I guess. And then the other thing I noticed is that you Also have financing?" | [1523s–1600s] Tech: "So for financing, can you show me the monthly payment and for how long is that? So we have... 120 month, 8.99 interest with autopay..." | [1689s–1742s] Tech: "Within a year. But then I think the terms actually go really, really close. It's like four, five years of, I think 9.99 from there..."",
+      "suggestion": "Present financing options proactively earlier in the sales process to remove price objections."
+    },
+    {
       "stage": "Closing & Thank You",
       "score": 0,
       "max": 5,

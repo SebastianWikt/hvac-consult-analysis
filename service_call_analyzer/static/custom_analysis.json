@@ -42,48 +42,69 @@
       ]
     },
     "Upsell Attempts": {
-      "analysis": "No clear upselling attempts were identified in this call. This represents a missed opportunity to add value and increase revenue through complementary services.",
+      "analysis": "Limited upselling was attempted during this call, with most additional services mentioned only in passing during the solution explanation phase. The technician missed several opportunities to present value-added services that could address the customer's specific needs and concerns.",
       "key_points": [
-        "No additional services offered",
-        "Missed opportunities for duct sealing promotion",
-        "No discussion of air quality improvements",
-        "Limited exploration of customer's other needs"
+        "[390s-527s]: Duct sealing mentioned as part of HERS test requirement, but not positioned as standalone value-add",
+        "[367s-389s]: Plywood replacement mentioned as potential need but not explored further",
+        "[797s-825s]: HERS test discussed as requirement rather than benefit to customer",
+        "No discussion of air quality improvements despite mold issues mentioned",
+        "No exploration of smart home integration or advanced thermostat features"
       ],
       "recommendations": [
-        "Identify customer pain points that could benefit from additional services",
-        "Offer complementary services that enhance the main solution",
-        "Present upsells as value-added solutions, not just additional costs",
-        "Tie upsell benefits directly to diagnosed issues"
+        "Position duct sealing as energy efficiency improvement, not just compliance requirement",
+        "Explore indoor air quality solutions given the mold issues mentioned",
+        "Present maintenance plans as warranty protection and peace of mind",
+        "Tie upsell benefits directly to diagnosed problems (efficiency, mold, reliability)"
       ]
     },
     "Maintenance Plan Offer": {
-      "analysis": "The maintenance plan was mentioned briefly but not properly presented as a valuable service. This is a significant missed opportunity for recurring revenue and customer retention.",
+      "analysis": "The maintenance plan was barely mentioned and not properly presented as a valuable service. This represents a significant missed opportunity for recurring revenue, customer retention, and warranty compliance. The technician failed to connect maintenance to the equipment investment protection.",
       "key_points": [
-        "Maintenance plan mentioned in passing",
-        "No clear explanation of plan benefits",
-        "No pricing or service details provided",
-        "Missed connection to warranty terms"
+        "[586s]: Brief mention of maintenance program in relation to warranty matching",
+        "No standalone presentation of maintenance plan benefits",
+        "No pricing or service schedule details provided",
+        "Missed connection between maintenance and equipment longevity",
+        "No emphasis on preventive care vs. reactive repairs"
       ],
       "recommendations": [
-        "Present maintenance plan as essential for equipment longevity",
-        "Clearly explain what's included and the service schedule",
-        "Connect maintenance to warranty requirements",
-        "Provide clear pricing and value proposition"
+        "Present maintenance plan as essential investment protection, not optional add-on",
+        "Clearly explain bi-annual service schedule and what's included in each visit",
+        "Connect maintenance directly to warranty requirements and manufacturer recommendations",
+        "Emphasize cost savings of preventive maintenance vs. emergency repairs",
+        "Provide clear pricing and demonstrate ROI through extended equipment life"
+      ]
+    },
+    "Financing": {
+      "analysis": "The financing discussion was customer-initiated and handled well by the technician. Multiple payment options were presented clearly, including different term lengths and interest rates. The technician effectively explained the flexibility of payment plans and addressed customer questions about early payoff options.",
+      "key_points": [
+        "[1516s-1520s]: Customer initiated financing inquiry - good sign of purchase intent",
+        "[1523s-1600s]: Technician presented multiple financing options with clear terms (120 months at 8.99%, 180 months, etc.)",
+        "[1600s-1664s]: Good explanation of 60-month option with specific monthly payment ($335)",
+        "[1664s-1689s]: Addressed customer question about early payoff and deferred payment options",
+        "[1689s-1742s]: Explained how partial payments affect remaining balance and interest calculations"
+      ],
+      "recommendations": [
+        "Lead with the most popular or recommended financing option to simplify decision-making",
+        "Provide written summary of financing terms for customer reference",
+        "Emphasize the 'no down payment' benefit more prominently as a key selling point",
+        "Connect financing options to the value proposition and long-term savings"
       ]
     },
     "Closing & Thank You": {
-      "analysis": "The closing was handled professionally with appropriate follow-up commitments. The technician respected the customer's need to consult with their spouse and provided clear next steps.",
+      "analysis": "The closing was handled professionally with good respect for the customer's decision-making process. The technician successfully secured a commitment for follow-up and managed to collect payment for the service call. However, there were missed opportunities to reinforce value propositions and create urgency for the decision.",
       "key_points": [
-        "Respected customer's decision-making process",
-        "Committed to email follow-up with quotes",
-        "Professional handling of payment discussion",
-        "Clear next steps established"
+        "[1748s-1765s]: Respected customer's need to consult with spouse - good relationship building",
+        "[1772s-1838s]: Offered financing options and no down payment to remove barriers",
+        "[1838s-1845s]: Customer clearly stated decision timeline - technician accepted gracefully",
+        "[1845s-1910s]: Successfully collected service call payment and confirmed next steps",
+        "[1910s-1928s]: Professional handling of payment processing and final details"
       ],
       "recommendations": [
-        "Recap key benefits and value propositions",
-        "Set specific timeline for follow-up",
-        "Confirm all decision-makers are included in communications",
-        "Express appreciation for the customer's time and consideration"
+        "Recap 2-3 key benefits before customer leaves to reinforce value proposition",
+        "Set specific timeline for follow-up (e.g., 'I'll email quotes by tomorrow morning')",
+        "Create gentle urgency by mentioning rebate deadlines or seasonal considerations",
+        "Confirm all decision-makers will receive the information and include spouse in communications",
+        "End with genuine appreciation and confidence in the solution's value for their home"
       ]
     }
   }
