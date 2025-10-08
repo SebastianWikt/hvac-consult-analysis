@@ -56,24 +56,16 @@
         "Limited usage of data and backing trusted products is good. Establishes relationship with client",
         "Dynamically adjustable estimate, which can help the customer see what they would be purchasing",
         "Visuals to help the customer make a decision and understand what the technician is describing",
-        "Focusing on the client interaction/experience -> taking calls and looking things up is not a good use of time"
+        "Focusing on the client interaction -> taking calls and looking things up is not a good use of time"
       ]
     },
     "Maintenance Plan Offer": {
       "analysis": "The maintenance plan was barely mentioned and not properly presented as a valuable service. This represents a significant missed opportunity for recurring revenue, customer retention, and warranty compliance. The technician failed to connect maintenance to the equipment investment protection.",
       "key_points": [
-        "[586s]: Brief mention of maintenance program in relation to warranty matching",
-        "No standalone presentation of maintenance plan benefits",
-        "No pricing or service schedule details provided",
-        "Missed connection between maintenance and equipment longevity",
-        "No emphasis on preventive care vs. reactive repairs"
+        "[480s-541s]: The maintenance plan offer is good. I like the 10-year warranty and percentages in savings. However, the customer will likely not understand a SEER rating and the specifics WHY the discount is applied is likely not important to the customer."
       ],
       "recommendations": [
-        "Present maintenance plan as essential investment protection, not optional add-on",
-        "Clearly explain bi-annual service schedule and what's included in each visit",
-        "Connect maintenance directly to warranty requirements and manufacturer recommendations",
-        "Emphasize cost savings of preventive maintenance vs. emergency repairs",
-        "Provide clear pricing and demonstrate ROI through extended equipment life"
+        "Focus on improvement of quality of life for customer. Mention statstics but also connect with the real experience of the customer. How will a particular maintenance plan IMPACT them."
       ]
     },
     "Financing": {
