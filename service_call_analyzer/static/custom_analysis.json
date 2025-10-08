@@ -45,11 +45,11 @@
       "analysis": "Limited upselling was attempted during this call, with most additional services mentioned only in passing during the solution explanation phase. The technician missed several opportunities to present value-added services that could address the customer's specific needs and concerns.",
       "key_points": [
         "[199s-345s]: Tech upsells heat pump mainly along with newest nest thermostat. Includes rebates for both. Mention of customer benefits is limited. Perhaps talk about this would be more helpful than rebates",
-        "[345s-389s]: Plywood replacement mentioned as potential need but not explored further. Again, we can emphasize customer impact/ benefits here",
-        "[707s-911s]: Mention of Daikin is great upsell opportunity. ",
-        "[1061s-1441s]:",
-        "No discussion of air quality improvements despite mold issues mentioned",
-        "No exploration of smart home integration or advanced thermostat features"
+        "[345s-389s]: Plywood replacement mentioned as potential need but not explored further. Again, we can emphasize customer impact/ benefits.",
+        "[707s-911s]: Mention of Daikin is great upsell opportunity. Repeated use is a fantastic trust factor, but customer benfits should be emphasized.",
+        "[1061s-1171s]: This is a better upsell attempt as the client complains about the noise and this directly solves the problem. 20% noise decrease is great statistics. More evidence would be even better.",
+        "[1246s-1309s]: Bosch (upward unit) upsell described -> Good attempt at upsell as the customer is looking for this for this upward shape. I think visual comparison of units and features could be helpful here, but the technician doesn't have all available information on hand.",
+        "[1309s-1441s]: MISS -> The technician tries to sell the Energy Star rebate and has to spend time looking up if its available on a different unit. Additionally, the estimate is not revised in the way the customer would like it. Having technology that dynamically adjusts may be helpful"
       ],
       "recommendations": [
         "Focus on customer experience and customer impact during consult. Talk about details and rebates goes right over customer's head",
