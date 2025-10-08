@@ -44,14 +44,15 @@
     "Upsell Attempts": {
       "analysis": "Limited upselling was attempted during this call, with most additional services mentioned only in passing during the solution explanation phase. The technician missed several opportunities to present value-added services that could address the customer's specific needs and concerns.",
       "key_points": [
-        "[390s-527s]: Duct sealing mentioned as part of HERS test requirement, but not positioned as standalone value-add",
-        "[367s-389s]: Plywood replacement mentioned as potential need but not explored further",
-        "[797s-825s]: HERS test discussed as requirement rather than benefit to customer",
+        "[199s-345s]: Tech upsells heat pump mainly along with newest nest thermostat. Includes rebates for both. Mention of customer benefits is limited. Perhaps talk about this would be more helpful than rebates",
+        "[345s-389s]: Plywood replacement mentioned as potential need but not explored further. Again, we can emphasize customer impact/ benefits here",
+        "[707s-911s]: Mention of Daikin is great upsell opportunity. ",
+        "[1061s-1441s]:",
         "No discussion of air quality improvements despite mold issues mentioned",
         "No exploration of smart home integration or advanced thermostat features"
       ],
       "recommendations": [
-        "Position duct sealing as energy efficiency improvement, not just compliance requirement",
+        "Focus on customer experience and customer impact during consult. Talk about details and rebates goes right over customer's head",
         "Explore indoor air quality solutions given the mold issues mentioned",
         "Present maintenance plans as warranty protection and peace of mind",
         "Tie upsell benefits directly to diagnosed problems (efficiency, mold, reliability)"
