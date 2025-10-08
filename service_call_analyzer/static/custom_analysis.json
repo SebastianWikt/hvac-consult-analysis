@@ -52,10 +52,11 @@
         "[1309s-1441s]: MISS -> The technician tries to sell the Energy Star rebate and has to spend time looking up if its available on a different unit. Additionally, the estimate is not revised in the way the customer would like it. Having technology that dynamically adjusts may be helpful"
       ],
       "recommendations": [
-        "Focus on customer experience and customer impact during consult. Talk about details and rebates goes right over customer's head",
-        "Explore indoor air quality solutions given the mold issues mentioned",
-        "Present maintenance plans as warranty protection and peace of mind",
-        "Tie upsell benefits directly to diagnosed problems (efficiency, mold, reliability)"
+        "Focus on customer experience and customer impact during consult. Talk about details and rebates goes right over customer's head in the moment",
+        "Limited usage of data and backing trusted products is good. Establishes relationship with client",
+        "Dynamically adjustable estimate, which can help the customer see what they would be purchasing",
+        "Visuals to help the customer make a decision and understand what the technician is describing",
+        "Focusing on the client interaction/experience -> taking calls and looking things up is not a good use of time"
       ]
     },
     "Maintenance Plan Offer": {
