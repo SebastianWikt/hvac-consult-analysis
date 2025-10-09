@@ -42,7 +42,7 @@
       ]
     },
     "Upsell Attempts": {
-      "analysis": "Limited upselling was attempted during this call, with most additional services mentioned only in passing during the solution explanation phase. The technician missed several opportunities to present value-added services that could address the customer's specific needs and concerns.",
+      "analysis": "The technician missed several opportunities to present value-added services that could address the customer's specific needs and concerns. When the tech did attempt to upsell an item, he often got too technical and didn't focus on the customer experience when selling the product.",
       "key_points": [
         "[199s-345s]: Tech upsells heat pump mainly along with newest nest thermostat. Includes rebates for both. Mention of customer benefits is limited. Perhaps talk about this would be more helpful than rebates",
         "[345s-389s]: Plywood replacement mentioned as potential need but not explored further. Again, we can emphasize customer impact/ benefits.",
@@ -71,17 +71,12 @@
     "Financing": {
       "analysis": "The financing discussion was customer-initiated and handled well by the technician. Multiple payment options were presented clearly, including different term lengths and interest rates. The technician effectively explained the flexibility of payment plans and addressed customer questions about early payoff options.",
       "key_points": [
-        "[1516s-1520s]: Customer initiated financing inquiry - good sign of purchase intent",
-        "[1523s-1600s]: Technician presented multiple financing options with clear terms (120 months at 8.99%, 180 months, etc.)",
-        "[1600s-1664s]: Good explanation of 60-month option with specific monthly payment ($335)",
-        "[1664s-1689s]: Addressed customer question about early payoff and deferred payment options",
-        "[1689s-1742s]: Explained how partial payments affect remaining balance and interest calculations"
+        "[1517s-1614s]: Good explanation of the financing. The tech also includes the Bosch (airflow up) which is aligned with customer",
+        "[1615s-1742s]: Answers customer question and explains options well. Customer acknoledges the explanation and seems to understand well."
       ],
       "recommendations": [
-        "Lead with the most popular or recommended financing option to simplify decision-making",
-        "Provide written summary of financing terms for customer reference",
-        "Emphasize the 'no down payment' benefit more prominently as a key selling point",
-        "Connect financing options to the value proposition and long-term savings"
+        "Lead with the most popular or recommended financing option to simplify decision-making.",
+        "Give high level view of options initially before giving detials (# of options, # of years in each option)."
       ]
     },
     "Closing & Thank You": {
