@@ -84,7 +84,7 @@ function processCallData(data) {
         'Solution Explanation': 2,
         'Rebates & Incentives': 2,
         'Problem Diagnosis': 2,
-        'Introduction': 1.5,
+        'Introduction': 1,
         'Maintenance Plan Offer': 1,
         'Financing': 1,
         'Closing & Thank You': 1
@@ -168,7 +168,7 @@ function generateMainHTML(processedData, customAnalysis) {
                 <div class="col-12">
                     <div class="alert alert-info py-2">
                         <small><i class="bi bi-info-circle me-1"></i>
-                        <strong>Weighted Scoring:</strong> Upsell Attempts counts 3x (highest priority); Problem Diagnosis, Solution Explanation, and Rebates count 2x; Introduction counts 1.5x; other sections count 1x in the overall compliance score.
+                        <strong>Weighted Scoring:</strong> Upsell Attempts counts 3x (highest priority); Problem Diagnosis, Solution Explanation, and Rebates count 2x; all other sections count 1x in the overall compliance score.
                         </small>
                     </div>
                 </div>
@@ -271,7 +271,7 @@ function generateComplianceCard(compliance) {
         'Solution Explanation': 2,
         'Rebates & Incentives': 2,
         'Problem Diagnosis': 2,
-        'Introduction': 1.5,
+        'Introduction': 1,
         'Maintenance Plan Offer': 1,
         'Financing': 1,
         'Closing & Thank You': 1
