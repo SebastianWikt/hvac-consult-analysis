@@ -8,7 +8,7 @@
   "compliance_check": [
     {
       "stage": "Introduction",
-      "score": 3.5,
+      "score": 4,
       "max": 5,
       "evidence": "[12s–19s] Tech: “Hello. Hey, Luis. Got you all done. The reason that took so long is I. I just kind of also built all your equipment options when I was out there too.” | [39s–43s] Customer: “I literally can't work from anywhere else but your home.”",
       "suggestion": "Open with name, company, role, purpose; confirm it’s a good time."
@@ -43,7 +43,7 @@
     },
     {
       "stage": "Financing",
-      "score": 3,
+      "score": 4,
       "max": 5,
       "evidence": "[1516s–1520s] Customer: 'And I guess. And then the other thing I noticed is that you Also have financing?' | [1523s–1600s] Tech: 'So for financing, can you show me the monthly payment and for how long is that? So we have... 120 month, 8.99 interest with autopay...' | [1689s–1742s] Tech: 'Within a year. But then I think the terms actually go really, really close. It's like four, five years of, I think 9.99 from there...'",
       "suggestion": "Present financing options proactively earlier in the sales process to remove price objections."
