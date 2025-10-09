@@ -75,8 +75,32 @@ function processCallData(data) {
         }
     }
     
-    // Calculate summary
+    // Calculate summary with weighted scoring
     const totalUtterances = (data.utterances || []).length;
+    
+    // Define weights for different sections
+    const sectionWeights = {
+        'Upsell Attempts': 3,
+        'Solution Explanation': 2,
+        'Rebates & Incentives': 2,
+        'Problem Diagnosis': 2,
+        'Introduction': 1.5,
+        'Maintenance Plan Offer': 1,
+        'Financing': 1,
+        'Closing & Thank You': 1
+    };
+    
+    // Calculate weighted scores
+    let totalWeightedScore = 0;
+    let totalWeightedMax = 0;
+    
+    (data.compliance_check || []).forEach(check => {
+        const weight = sectionWeights[check.stage] || 1;
+        totalWeightedScore += (check.score || 0) * weight;
+        totalWeightedMax += (check.max || 5) * weight;
+    });
+    
+    // Also calculate unweighted for comparison
     const totalComplianceScore = (data.compliance_check || []).reduce((sum, check) => sum + (check.score || 0), 0);
     const maxComplianceScore = (data.compliance_check || []).reduce((sum, check) => sum + (check.max || 5), 0);
     
@@ -86,9 +110,12 @@ function processCallData(data) {
         total_utterances: totalUtterances,
         total_stages: stages.length,
         stages: stages,
-        compliance_score: totalComplianceScore,
-        max_compliance_score: maxComplianceScore,
-        compliance_percentage: maxComplianceScore > 0 ? (totalComplianceScore / maxComplianceScore * 100) : 0
+        compliance_score: Math.round(totalWeightedScore * 10) / 10, // Weighted score with 1 decimal
+        max_compliance_score: totalWeightedMax,
+        compliance_percentage: totalWeightedMax > 0 ? (totalWeightedScore / totalWeightedMax * 100) : 0,
+        unweighted_score: totalComplianceScore, // Keep unweighted for reference
+        unweighted_max: maxComplianceScore,
+        unweighted_percentage: maxComplianceScore > 0 ? (totalComplianceScore / maxComplianceScore * 100) : 0
     };
     
     return {
@@ -123,13 +150,26 @@ function generateMainHTML(processedData, customAnalysis) {
                             </div>
                             <div class="stat-item">
                                 <span class="stat-value">${callSummary.compliance_score}/${callSummary.max_compliance_score}</span>
-                                <span class="stat-label">Compliance Score</span>
+                                <span class="stat-label">Weighted Compliance Score</span>
+                                <small class="text-muted d-block">Unweighted: ${callSummary.unweighted_score}/${callSummary.unweighted_max}</small>
                             </div>
                             <div class="stat-item">
                                 <span class="stat-value">${Math.round(callSummary.compliance_percentage)}%</span>
-                                <span class="stat-label">Compliance Rate</span>
+                                <span class="stat-label">Weighted Compliance Rate</span>
+                                <small class="text-muted d-block">Unweighted: ${Math.round(callSummary.unweighted_percentage)}%</small>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weighted Scoring Info -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="alert alert-info py-2">
+                        <small><i class="bi bi-info-circle me-1"></i>
+                        <strong>Weighted Scoring:</strong> Upsell Attempts counts 3x (highest priority); Problem Diagnosis, Solution Explanation, and Rebates count 2x; Introduction counts 1.5x; other sections count 1x in the overall compliance score.
+                        </small>
                     </div>
                 </div>
             </div>
@@ -225,10 +265,33 @@ function generateComplianceCard(compliance) {
     const fillClass = compliance.score >= 4 ? 'good' : compliance.score >= 2 ? 'medium' : 'poor';
     const percentage = Math.round((compliance.score / compliance.max_score) * 100);
     
+    // Check if this stage has weighted scoring
+    const sectionWeights = {
+        'Upsell Attempts': 3,
+        'Solution Explanation': 2,
+        'Rebates & Incentives': 2,
+        'Problem Diagnosis': 2,
+        'Introduction': 1.5,
+        'Maintenance Plan Offer': 1,
+        'Financing': 1,
+        'Closing & Thank You': 1
+    };
+    
+    const weight = sectionWeights[compliance.stage] || 1;
+    let weightIndicator = '';
+    
+    if (weight === 3) {
+        weightIndicator = '<span class="badge bg-danger ms-2" title="This section has 3x weight in overall scoring">3x Weight</span>';
+    } else if (weight === 2) {
+        weightIndicator = '<span class="badge bg-primary ms-2" title="This section has 2x weight in overall scoring">2x Weight</span>';
+    } else if (weight === 1.5) {
+        weightIndicator = '<span class="badge bg-info ms-2" title="This section has 1.5x weight in overall scoring">1.5x Weight</span>';
+    }
+    
     return `
         <div class="compliance-rating-card">
             <div class="rating-header">
-                <h5><i class="bi bi-clipboard-check me-2"></i>Compliance Rating</h5>
+                <h5><i class="bi bi-clipboard-check me-2"></i>Compliance Rating${weightIndicator}</h5>
                 <div class="rating-score ${scoreClass}">
                     ${compliance.score}/${compliance.max_score}
                 </div>
