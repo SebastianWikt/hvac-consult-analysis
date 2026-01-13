@@ -133,6 +133,21 @@ function generateMainHTML(processedData, customAnalysis) {
     
     return `
         <div class="container-fluid">
+            <!-- Privacy Notice Banner -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="alert alert-primary border-primary">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-shield-check fs-4 me-3 text-primary"></i>
+                            <div>
+                                <h6 class="mb-1"><strong>Synthetic Reconstruction - Portfolio Demonstration</strong></h6>
+                                <small class="mb-0">This is a synthetic reconstruction based on multiple HVAC service calls. No real customer data is included. This demonstration showcases service call analysis capabilities while maintaining complete privacy compliance.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Call Summary Header -->
             <div class="row mb-4">
                 <div class="col-12">
