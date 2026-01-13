@@ -4,7 +4,7 @@
     "date_analyzed": "2024-01-15",
     "transcribed_with": "Synthetic data based on multiple HVAC service calls",
     "stages_auto_tagged": true,
-    "privacy_notice": "This is a synthetic reconstruction based on multiple HVAC service calls. No real customer data is included.",
+    "privacy_notice": "This is a synthetic reconstruction based on HVAC service calls. No real customer data is included.",
     "purpose": "Portfolio demonstration of service call analysis capabilities"
   },
   "compliance_check": [
