@@ -2,7 +2,7 @@
   "meta": {
     "call_type": "HVAC Service Consultation (Synthetic Reconstruction)",
     "date_analyzed": "2024-01-15",
-    "transcribed_with": "Synthetic data based on multiple HVAC service calls",
+    "transcribed_with": "Synthetic data based on HVAC service calls",
     "stages_auto_tagged": true,
     "privacy_notice": "This is a synthetic reconstruction based on HVAC service calls. No real customer data is included.",
     "purpose": "Portfolio demonstration of service call analysis capabilities"
@@ -229,7 +229,7 @@
       "stage": "Closing & Thank You"
     }
   ],
-  "full_transcript": "[SYNTHETIC RECONSTRUCTION] This transcript represents a composite analysis based on multiple HVAC service calls. The conversation flow demonstrates typical patterns in service consultations including: initial greeting and rapport building, system diagnosis discussion, comprehensive solution presentation with multiple equipment options, rebate and financing information, and professional closing with follow-up coordination. All specific customer information has been removed and replaced with representative dialogue patterns common in HVAC service interactions.",
+  "full_transcript": "[SYNTHETIC RECONSTRUCTION] This transcript represents a composite analysis based on HVAC service calls. The conversation flow demonstrates typical patterns in service consultations including: initial greeting and rapport building, system diagnosis discussion, comprehensive solution presentation with multiple equipment options, rebate and financing information, and professional closing with follow-up coordination. All specific customer information has been removed and replaced with representative dialogue patterns common in HVAC service interactions.",
   "segments": [
     {
       "speaker": "Tech",

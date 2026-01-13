@@ -4,7 +4,7 @@ A web application for analyzing service call recordings with automated transcrip
 
 > **🔒 Privacy Notice**: This demonstration uses synthetic data reconstructed from multiple service calls. No real customer information is included, ensuring complete privacy compliance while showcasing full analytical capabilities.
 
-Note: Sensitive customer information is *removed* to display as a work sample. This is a synthetic reconstruction based on multiple HVAC service calls. No real customer data is included.
+Note: Sensitive customer information is *removed* to display as a work sample. This is a synthetic reconstruction based on HVAC service calls. No real customer data is included.
 
 ## Overview
 

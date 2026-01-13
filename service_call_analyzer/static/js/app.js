@@ -141,7 +141,7 @@ function generateMainHTML(processedData, customAnalysis) {
                             <i class="bi bi-shield-check fs-4 me-3 text-primary"></i>
                             <div>
                                 <h6 class="mb-1"><strong>Synthetic Reconstruction - Portfolio Demonstration</strong></h6>
-                                <small class="mb-0">This is a synthetic reconstruction based on multiple HVAC service calls. No real customer data is included. This demonstration showcases service call analysis capabilities while maintaining complete privacy compliance.</small>
+                                <small class="mb-0">This is a synthetic reconstruction based on HVAC service calls. No real customer data is included. This demonstration showcases service call analysis capabilities while maintaining complete privacy compliance.</small>
                             </div>
                         </div>
                     </div>
