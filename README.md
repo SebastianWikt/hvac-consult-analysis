@@ -2,6 +2,8 @@
 
 A web application for analyzing service call recordings with automated transcription, compliance scoring, and detailed performance insights. Built for HVAC service companies to improve sales effectiveness and customer interactions.
 
+Note: Sensitive customer information is *removed* to display as a work sample. This is a synthetic reconstruction based on multiple HVAC service calls. No real customer data is included.
+
 ## Overview
 
 This tool processes service call recordings to provide:
@@ -10,8 +12,6 @@ This tool processes service call recordings to provide:
 - **Compliance scoring** across key sales stages with weighted metrics
 - **Custom analysis** with actionable recommendations
 - **Interactive visualization** of call flow and performance metrics
-
-Note: Sensitive customer information is *removed* to display as a work sample
 
 ## Tools Used
 
@@ -77,4 +77,5 @@ npm run dev
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
